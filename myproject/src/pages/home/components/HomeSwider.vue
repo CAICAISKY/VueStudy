@@ -38,7 +38,7 @@ export default {
     overflow: hidden
     width: 100%
     height: 0
-    padding-bottom: 28%
+    padding-bottom: 26.5%
     .swider-img
       width: 100%
 </style>
