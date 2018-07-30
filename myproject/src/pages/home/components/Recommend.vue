@@ -3,8 +3,8 @@
     <div class="recommend-title">热销推荐</div>
     <ul v-for="item of itemList" :key="item.id">
       <li class="item border-bottom">
-        <img class="item-img fl" :src="item.imgUrl">
-        <div class="item-info fl">
+        <img class="item-img" :src="item.imgUrl">
+        <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.info}}</p>
           <button class="item-button">查看详情</button>
