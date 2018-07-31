@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="recommend-title">热销推荐</div>
-    <ul v-for="item of itemList" :key="item.id">
+    <ul v-for="item of list" :key="item.id">
       <li class="item border-bottom">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      itemList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1807/99/992c99c98928c509a3.water.jpg_200x200_fc4df6ea.jpg',
-        title: '深圳欢乐谷',
-        info: '深圳欢乐谷'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/6f/6f885ea8b30c67bca3.water.jpg_200x200_21b03a9c.jpg',
-        title: '世界之窗',
-        info: '这里特别受欢迎哟(๑‾ ꇴ ‾๑)'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/64/34362835b4a219af8b36803d31a6380f.water.jpg_200x200_bc5c0452.jpg',
-        title: '深圳小梅沙海洋世界',
-        info: '一天穿越四大洋'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201307/18/f25ac054eec3804dc8d65eac.jpg_200x200_a008b6ca.jpg',
-        title: '海洋奇梦馆',
-        info: '这里最近很火哦，好多人都在点评它呢！'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
