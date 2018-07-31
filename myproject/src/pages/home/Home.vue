@@ -14,6 +14,8 @@ import HomeSwider from '@/pages/home/components/HomeSwider'
 import HomeIcons from '@/pages/home/components/Icons'
 import HomeRecommend from '@/pages/home/components/Recommend'
 import HomeWeekend from '@/pages/home/components/Weekend'
+import axios from 'axios'
+
 export default {
   name: 'hello',
   components: {
@@ -22,7 +24,19 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeWeekend
+  },
+  mounted () {
+    this.getHomeInfo()
+  },
+  methods: {
+    getHomeInfo () {
+      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc (response) {
+      console.log(response)
+    }
   }
+
 }
 </script>
 
