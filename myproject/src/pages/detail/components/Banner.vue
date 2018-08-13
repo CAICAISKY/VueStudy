@@ -4,14 +4,15 @@
       <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1807/99/992c99c98928c509a3.water.jpg_600x330_3b1186e2.jpg">
       <div class="banner-info">
         <div class="banner-title">
-          深圳欢乐谷(AAAAA景区)
+          {{sightName}}
         </div>
         <div class="banner-number">
-          <span class="iconfont banner-icon">&#xe6e5;</span>39
+          <span class="iconfont banner-icon">&#xe6e5;</span>
+          {{gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="gallaryShow" @gallaryClose="handleGallaryClose"></common-gallary>
+    <common-gallary :imgs="gallaryImgs" v-show="gallaryShow" @gallaryClose="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
@@ -22,12 +23,14 @@ export default {
   components: {
     CommonGallary
   },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   data () {
     return {
-      gallaryShow: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/1807/99/992c99c98928c509a3.water.jpg_r_800x800_7a523d16.jpg',
-        'http://img1.qunarzz.com/sight/p0/1805/17/176c2114bb8ae255a3.water.png_r_800x800_59037929.png'
-      ]
+      gallaryShow: false
     }
   },
   methods: {
