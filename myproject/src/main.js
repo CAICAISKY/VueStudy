@@ -7,6 +7,7 @@ import 'styles/iconfont.css'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
+import 'babel-polyfill'
 import 'swiper/dist/css/swiper.css'
 
 fastClick.attach(document.body)
